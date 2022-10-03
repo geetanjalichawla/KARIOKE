@@ -56,10 +56,15 @@ document.addEventListener('keypress', function(c) {
 });
 
 function addAnimation(key){
-  document.querySelector("."+key).classList.add('pressed');
+
+  var activeButton = document.querySelector("." + Key);
+
+  activeButton.classList.add("pressed");
+
   setTimeout(function() {
-    document.querySelector('.'+key).classList.remove("pressed");
+    activeButton.classList.remove("pressed");
   }, 100);
+
 }
 // const buttons = document.querySelectorAll("button");
 // buttons.forEach(button => button.addEventListener("click", () => {
