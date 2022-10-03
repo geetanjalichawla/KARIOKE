@@ -9,6 +9,7 @@ for (var i = 0; i < buttons.length; i++) {
   document.querySelectorAll(".drum")[i].addEventListener("click", function() {
       var c = this.innerHTML;
       playaudio(c);
+     addAnimation(c);
     }
   )
 }
@@ -51,7 +52,12 @@ function playaudio(c) {
 
 document.addEventListener('keypress', function(c) {
   playaudio(c.key);
+   addAnimation(c.key);
 });
+
+function addAnimation(key){
+  document.querySelector("."+key).classList.add('.pressed');
+}
 // const buttons = document.querySelectorAll("button");
 // buttons.forEach(button => button.addEventListener("click", () => {
 //     alert("You clicked me");
