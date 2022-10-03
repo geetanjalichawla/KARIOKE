@@ -49,7 +49,7 @@ function playaudio(c) {
   }
 }
 
-addEventListener('keypress', function(c) {
+document.addEventListener('keypress', function(c) {
   playaudio(c.key);
 });
 // const buttons = document.querySelectorAll("button");
